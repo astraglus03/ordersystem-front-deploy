@@ -35,7 +35,7 @@ jobs:
               aws-region: "ap-northeast-2"
 
           - name: deploy to s3
-            run: aws s3 cp ./dist s3://www.astra1234.shop --recursive
+            run: aws s3 cp ./dist s3://www.astra1212.shop --recursive
 
           - name: invalidate cloudfront
             run: aws cloudfront create-invalidation --distribution-id EY2RDOEKK555A --paths "/*"

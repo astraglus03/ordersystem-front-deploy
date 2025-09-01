@@ -75,7 +75,7 @@ import axios from 'axios';
         data.append("price", this.price);
         data.append("stockQuantity", this.stockQuantity);
         data.append("productImage", this.productImage);
-        await axios.post("http://localhost:8080/product/create", data);
+        await axios.post(`${process.env.VUE_APP_API_BASE_URL}/product/create`, data);
         this.$router.push("/product/manage");
       }catch(e){
         console.log(e);
